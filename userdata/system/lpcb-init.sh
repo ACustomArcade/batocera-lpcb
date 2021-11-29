@@ -9,5 +9,6 @@ start)
 ;;
 stop)
   kill -9 `cat ${PID_FILE}`
+  rm -f $PID_FILE
 ;;
 esac
