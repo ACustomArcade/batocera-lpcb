@@ -10,4 +10,6 @@ grep -qxF '/userdata/system/gpionext-init.sh $1' /userdata/system/custom.sh 2> /
 
 curl -kLo /userdata/system/GPIOnext/config/config.db https://github.com/ACustomArcade/batocera-lpcb/raw/main/userdata/system/GPIONext/config/config.db
 
-echo "GPIOnext installed. Please reboot your system!"
+/userdata/system/gpionext-init.sh start
+
+echo "GPIOnext installed!"
