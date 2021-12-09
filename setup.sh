@@ -8,6 +8,6 @@ curl -kLo /userdata/system/gpionext-init.sh https://raw.githubusercontent.com/AC
 chmod +x /userdata/system/gpionext-init.sh
 grep -qxF '/userdata/system/gpionext-init.sh $1' /userdata/system/custom.sh 2> /dev/null || echo '/userdata/system/gpionext-init.sh $1' >> /userdata/system/custom.sh
 
-curl -kLo /userdata/system/GPIOnext/config/config.db https://raw.githubusercontent.com/ACustomArcade/batocera-lpcb/main/userdata/system/GPIOnext/config/config.db
+curl -kLo /userdata/system/GPIOnext/config/config.db https://github.com/ACustomArcade/batocera-lpcb/raw/main/userdata/system/GPIONext/config/config.db
 
 echo "GPIOnext installed. Please reboot your system!"
