@@ -23,7 +23,7 @@ if [[ -d "/userdata/system/lpcb" ]]; then
 fi
 
 cd /tmp
-curl -kLO /tmp/master.zip https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
+curl -kLO https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
 unzip -q master.zip
 mv GPIOnext-master/ /userdata/system/GPIOnext
 
