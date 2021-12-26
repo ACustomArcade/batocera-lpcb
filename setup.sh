@@ -23,10 +23,10 @@ if [[ -d "/userdata/system/lpcb" ]]; then
 fi
 
 cd /tmp
-curl -kLO https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
-unzip -q master.zip
+curl -kLO /tmp/GPIOnext-master.zip https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
+unzip -q /tmp/GPIOnext-master.zip
 mv GPIOnext-master/ /userdata/system/GPIOnext
-rm -f master.zip
+rm -f /tmp/GPIOnext-master.zip
 
 # cleanup old paths
 sed -i '/\/userdata\/system\/gpionext-init.sh/d' /userdata/system/custom.sh
