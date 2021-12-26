@@ -1,8 +1,9 @@
 #!/bin/bash
 version=1  #increment this as the script is updated
 
-if [[ -f "/userdata/system/lpcb/lpcb-version" ]]; then
-  echo "Existing Pixelcade installation detected, checking version..."
+if [[ -d "/userdata/system/lpcb" ]]; then
+  if [[ -f "/userdata/system/lpcb/lpcb-version" ]]; then
+    echo "Existing Pixelcade installation detected, checking version..."
     read -r currentVersion</userdata/system/lpcb/lpcb-version
     if [[ $currentVersion -lt $version ]]; then
       echo "Older lpcb version detected, now upgrading..."
