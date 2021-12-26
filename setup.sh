@@ -3,15 +3,15 @@ version=1  #increment this as the script is updated
 
 if [[ -d "/userdata/system/lpcb" ]]; then
   if [[ -f "/userdata/system/lpcb/lpcb-version" ]]; then
-    echo "Existing Pixelcade installation detected, checking version..."
+    echo "Existing LPCB installation detected, checking version..."
     read -r currentVersion</userdata/system/lpcb/lpcb-version
     if [[ $currentVersion -lt $version ]]; then
-      echo "Older lpcb version detected, now upgrading..."
+      echo "Older LPCB version detected, now upgrading..."
       /userdata/system/lpcb/init/gpionext-init.sh stop
     fi
   else
     while true; do
-      echo "Your existing lpcb installation will be deleted, do you want to re-install? (y/n): "
+      echo "Your existing LPCB installation will be deleted, do you want to re-install? (y/n): "
       read yn
       case $yn in
         [Yy]* ) /userdata/system/lpcb/init/gpionext-init.sh stop; rm -rf /userdata/system/lpcb; rm -rf /userdata/system/GPIOnext; break;;
