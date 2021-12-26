@@ -4,6 +4,12 @@ curl -kLO /tmp/master.zip https://github.com/mholgatem/GPIOnext/archive/refs/hea
 unzip -q master.zip
 mv GPIOnext-master/ /userdata/system/GPIOnext
 
+# cleanup old paths
+sed -i '/\/userdata\/system\/gpionext-init.sh/d' /userdata/system/custom.sh
+if [[ -f "/userdata/system/gpionext-init.sh" ]];  then
+  rm /userdata/system/gpionext-init.sh
+fi
+
 mkdir -p /userdata/system/lpcb/init
 curl -kLo /userdata/system/lpcb/init/gpionext-init.sh https://raw.githubusercontent.com/ACustomArcade/batocera-lpcb/main/userdata/system/gpionext-init.sh
 chmod +x /userdata/system/lpcb/init/gpionext-init.sh
