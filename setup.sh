@@ -10,7 +10,7 @@ if [[ -f "/userdata/system/lpcb/lpcb-version" ]]; then
     fi
   else
     while true; do
-      printf "${magenta}Your existing Pixelcade installation will be deleted including any custom artwork you've added, do you want to re-install? (y/n): ${white}"
+      echo "Your existing lpcb installation will be deleted, do you want to re-install? (y/n): "
       read yn
       case $yn in
         [Yy]* ) /userdata/system/lpcb/init/gpionext-init.sh stop; rm -rf /userdata/system/lpcb; rm -rf /userdata/system/GPIOnext; break;;
