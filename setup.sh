@@ -53,7 +53,8 @@ vol_down = $(cat /sys/class/gpio/gpio17/value)
 echo "You may now release the Volume Down button."
 read -p "Press enter to continue..."
 
-if [[ $vol_down == 1 ]]; then
+if [[ "$vol_down" == 1 ]]; then
+  echo "Swapping volume buttons in config database..."
   sqlite3 /userdata/system/GPIOnext/config/config.db 'UPDATE \'GPIOnext\' SET pins = \'11\' WHERE name = \'Volume Up\';'
   sqlite3 /userdata/system/GPIOnext/config/config.db 'UPDATE \'GPIOnext\' SET pins = \'13\' WHERE name = \'Volume Down\';'
 fi
