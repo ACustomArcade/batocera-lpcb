@@ -26,6 +26,7 @@ cd /tmp
 curl -kLO https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
 unzip -q master.zip
 mv GPIOnext-master/ /userdata/system/GPIOnext
+rm -f master.zip
 
 # cleanup old paths
 sed -i '/\/userdata\/system\/gpionext-init.sh/d' /userdata/system/custom.sh
