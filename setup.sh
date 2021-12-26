@@ -25,7 +25,7 @@ fi
 cd /tmp
 curl -kLo /tmp/GPIOnext-master.zip https://github.com/mholgatem/GPIOnext/archive/refs/heads/master.zip
 unzip -q /tmp/GPIOnext-master.zip
-mv GPIOnext-master/ /userdata/system/GPIOnext
+mv /tmp/GPIOnext-master /userdata/system/GPIOnext
 rm -f /tmp/GPIOnext-master.zip
 
 # cleanup old paths
