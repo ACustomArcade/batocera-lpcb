@@ -69,7 +69,7 @@ echo "Detecting Pixelcade..."
 if ls /dev/ttyACM0 | grep -q '/dev/ttyACM0'; then
    echo "Pixelcade LED Marquee Detected!"
    echo "Running the Pixelcade installer..."
-   bash <(curl -s https://raw.githubusercontent.com/ACustomArcade/batocera-pixelcade/main/batocera_setup.sh)
+   bash <(curl -s https://raw.githubusercontent.com/alinke/pixelcade-linux/main/installer-scripts/setup-batocera.sh)
 else
    echo "Sorry, Pixelcade LED Marquee was not detected. If you have one, please ensure Pixelcade is USB connected to your Pi and the toggle switch on the Pixelcade board is pointing towards USB, exiting..."
 fi
